@@ -44,7 +44,6 @@ class EventsListView(ListView):
         context = super(EventsListView, self).get_context_data(*args, **kwargs)
         context['active'] = self.kwargs['mode']
         context['popular_tags'] = Event.tags.most_common()[:10]
-        print(context)
         return context
 
 
